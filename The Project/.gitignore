@@ -1,0 +1,65 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+
+# Database
+*.db
+*.sqlite
+*.sql
+
+# Build
+dist/
+build/
+.cache/
+.next/
+
+# Testing
+.coverage/
+.nyc_output/
+
+# Temporary
+temp/
+tmp/
+*.tmp
+
+# Keys & Secrets (NEVER commit these)
+*.key
+*.pem
+*.p12
+credentials.json
+secrets.json
+
+# Backups
+*.bak
+*.backup
+*.old
+
+# Cache
+.cache/
+__pycache__/
+
+# External resources
+/vendor/
+/lib/

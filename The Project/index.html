@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printer Setup & Support - 24/7 Expert Help</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🖨️ Printer Not Working? Get Instant Expert Support</h1>
+            <p>24/7 Remote Setup & Technical Support from Certified Experts</p>
+            <button class="cta-primary" onclick="openChat()">Fix My Printer Now 🚀</button>
+        </div>
+        
+        <!-- Trust Elements -->
+        <div class="trust-elements">
+            <div class="trust-item">🔥 24/7 Support Available</div>
+            <div class="trust-item">⚡ Instant Remote Setup</div>
+            <div class="trust-item">👨‍🔧 Certified Experts</div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-wifi"></i>
+                <h3>Network Setup</h3>
+                <p>WiFi & Network Configuration</p>
+                <button class="cta-secondary" onclick="openChat()">Get Help Now</button>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-print"></i>
+                <h3>Driver Installation</h3>
+                <p>Install & Update Printer Drivers</p>
+                <button class="cta-secondary" onclick="openChat()">Talk to Technician</button>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tools"></i>
+                <h3>Troubleshooting</h3>
+                <p>Fix Printing Issues & Errors</p>
+                <button class="cta-secondary" onclick="openChat()">Get Instant Support</button>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile Setup</h3>
+                <p>Mobile Printing Configuration</p>
+                <button class="cta-secondary" onclick="openChat()">Chat Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT FORM SECTION ========== -->
+    <section class="contact-section">
+        <h2>Preferred Contact Method</h2>
+        <form id="contactForm" class="contact-form" onsubmit="handleContactForm(event)">
+            <div class="form-group">
+                <input type="text" id="contactName" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="contactPhone" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <textarea id="contactIssue" placeholder="Describe your printer issue..." rows="4" required></textarea>
+            </div>
+            <button type="submit" class="cta-primary">Submit & Get Support</button>
+        </form>
+    </section>
+
+    <!-- ========== FAQ SECTION ========== -->
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>How does your support work?</h3>
+                <p>Our experts connect remotely to your device and resolve issues in minutes. No need to visit service centers.</p>
+                <button class="cta-link" onclick="openChat()">Learn More</button>
+            </div>
+            <div class="faq-item">
+                <h3>What printers do you support?</h3>
+                <p>We support all major brands: HP, Canon, Brother, Xerox, Epson, Ricoh, and more.</p>
+                <button class="cta-link" onclick="openChat()">Learn More</button>
+            </div>
+            <div class="faq-item">
+                <h3>How long does setup take?</h3>
+                <p>Most setups are completed in 15-30 minutes. Complex issues may take up to 1 hour.</p>
+                <button class="cta-link" onclick="openChat()">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FLOATING CHAT BUTTON ========== -->
+    <div class="chat-btn" onclick="openChat()" title="Chat with Expert">
+        <i class="fas fa-comment-dots"></i>
+        <span>Chat Now</span>
+    </div>
+
+    <!-- ========== FLOATING WHATSAPP BUTTON ========== -->
+    <a href="https://wa.me/919876543210?text=Hi!%20I%20need%20help%20with%20printer%20setup.%20Can%20you%20assist?" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- ========== CHAT POPUP ========== -->
+    <div class="chat-popup" id="chatBox">
+        <div class="chat-header">
+            <h3>💬 Printer Support</h3>
+            <button class="close-btn" onclick="closeChat()">✕</button>
+        </div>
+        <div class="chat-body" id="chatMessages">
+            <div class="chat-message bot-message">
+                Hi 👋 Need help with printer setup?
+            </div>
+        </div>
+        <div class="chat-input-group">
+            <input type="text" id="userInput" placeholder="Type your response..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- ========== EXIT INTENT POPUP ========== -->
+    <div class="exit-popup" id="exitPopup">
+        <div class="exit-popup-content">
+            <button class="exit-close" onclick="closeExitPopup()">✕</button>
+            <h2>🎁 WAIT! Get FREE Printer Setup Help</h2>
+            <p>Don't leave without getting expert assistance. Limited time offer!</p>
+            <div class="exit-popup-buttons">
+                <button class="exit-cta" onclick="openChat()">💬 Chat Now</button>
+                <a href="https://wa.me/919876543210?text=I%20need%20FREE%20printer%20setup%20help!" target="_blank" class="exit-cta whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+            <p class="exit-disclaimer">👨‍🔧 Certified Experts Available 24/7</p>
+        </div>
+    </div>
+
+    <!-- ========== STICKY MOBILE CTA BAR ========== -->
+    <div class="sticky-cta-bar">
+        <button class="sticky-cta" onclick="callNow()">
+            <i class="fas fa-phone"></i> Call
+        </button>
+        <a href="https://wa.me/919876543210?text=Hi%20I%20need%20printer%20help" class="sticky-cta whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <button class="sticky-cta" onclick="openChat()">
+            <i class="fas fa-comment-dots"></i> Chat
+        </button>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Printer Setup Support. All rights reserved.</p>
+            <div class="footer-links">
+                <button onclick="openChat()">Contact Us</button>
+                <a href="https://wa.me/919876543210" target="_blank">WhatsApp Support</a>
+                <button onclick="scrollToTop()">Back to Top</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script src="script.js"></script>
+</body>
+</html>

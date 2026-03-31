@@ -1,0 +1,33 @@
+{
+  "name": "printer-setup-lead-system",
+  "version": "1.0.0",
+  "description": "Conversational Lead Capture System for Printer Setup Services",
+  "main": "backend-api.js",
+  "scripts": {
+    "start": "node backend-api.js",
+    "dev": "nodemon backend-api.js",
+    "serve": "http-server -p 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "printer",
+    "support",
+    "lead-capture",
+    "chatbot",
+    "whatsapp"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "body-parser": "^1.20.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "engines": {
+    "node": "16.0.0"
+  }
+}
